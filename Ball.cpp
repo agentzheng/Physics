@@ -1,6 +1,6 @@
 #include"Ball.h"
 
-Ball::Ball():x(INI_X),y(INI_Y),r(INI_R),m(INI_M),a(1000),v(100),vtheta(0.5),atheta(-1*PI/2){}
+Ball::Ball():x(INI_X),y(INI_Y),r(INI_R),m(INI_M),a(1000),v(100),vtheta(0),atheta(-1*PI/2){}
 Ball::Ball(double _x, double _y, int _r, double _m, double _a, double _v, double _vtheta,double _atheta) : x(_x), y(_y), r(_r), m(_r), a(_a), v(_v), vtheta(_vtheta),atheta(_atheta) {}
 void Ball::move()
 {
@@ -23,9 +23,9 @@ void Ball::paint()
 {
 	setfillcolor(WHITE);
 	solidcircle((int)x, (int)y,r);
-	//Sleep(5);
-	//setfillcolor(BLACK);
-	//solidcircle((int)x, (int)y, r);
+	Sleep(5);
+	setfillcolor(BLACK);
+	solidcircle((int)x, (int)y, r);
 }
 
 void Ball::SetAtheta(double _atheta)
